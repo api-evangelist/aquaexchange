@@ -1,0 +1,77 @@
+generated: '2026-09-25'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 5
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - identity
+  - marketing
+  - other
+  - website
+hosts:
+- host: api.aquaexchange.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: aquaexchange.com
+  role: api
+  relation: own
+- host: app.aquaexchange.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: aquaexchange.com
+  role: identity
+  relation: own
+- host: aquaexchange.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - TermsOfService
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: aquaexchange.com
+  role: website
+  relation: own
+- host: blog.aquaexchange.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Blog
+  serves: []
+  registrable_domain: aquaexchange.com
+  role: marketing
+  relation: own
+- host: dashboard.aquaexchange.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: aquaexchange.com
+  role: other
+  relation: own

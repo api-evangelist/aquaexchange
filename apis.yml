@@ -1,23 +1,66 @@
 aid: aquaexchange
+
 name: Aquaexchange
-description: 'Aquaexchange is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Aquaexchange is an IT solution company focused on transforming aquaculture through innovative IoT technology and data‑driven insights. Their platform offers farmers comprehensive, affordable tools to enhance productivity, sustainability, and resource efficiency in fish and shrimp farming. Founded in 2020, Aquaexchange provides services ranging from farm monitoring to data analytics, aiming to promote smarter, sustainable farm management worldwide.'
+
 url: https://raw.githubusercontent.com/api-evangelist/aquaexchange/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-25'
+
 modified: '2026-09-25'
+
 tags:
 - Company
-apis: []
+- Aquaculture
+- IoT
+- Sustainable Farming
+- Agriculture Technology
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/aquaexchange-hosts.yml
+- type: Vendors
+  url: vendors/aquaexchange-vendors.yml
+- type: TermsOfService
+  url: https://aquaexchange.com/TermsAndConditions.html
+- type: Login
+  url: https://app.aquaexchange.com/admin/login/?next=/admin/
+- type: Blog
+  url: https://blog.aquaexchange.com/
+- type: DomainSecurity
+  url: security/aquaexchange-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aquaexchange
+  url: https://aquaexchange.com
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract found after probing known API hosts.
+  evidence:
+    - url: https://api.aquaexchange.com/openapi.json
+      status: 0
+  checked: 2026-09-25
+x-enrichment:
+  date: '2026-09-25'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
